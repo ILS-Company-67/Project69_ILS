@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์ - เสฎฐวุฒิ วิชาพล</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Sarabun', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Blue 900
+                        secondary: '#3b82f6', // Blue 500
+                        accent: '#f59e0b', // Amber 500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f3f4f6; /* Gray 100 */
+            scroll-behavior: smooth;
+        }
+        .profile-img-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+            border-radius: 50%;
+            z-index: -1;
+            animation: spin 10s linear infinite;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased font-sans leading-relaxed selection:bg-secondary selection:text-white">
+
+    <div class="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto glass-card rounded-2xl overflow-hidden relative">
+            
+            <div class="h-48 bg-gradient-to-r from-primary to-secondary relative">
+                <!-- Decorative pattern or subtle overlay could go here -->
+                <div class="absolute inset-0 bg-black opacity-10"></div>
+            </div>
+
+            <div class="px-6 sm:px-10 pb-10">
+                <div class="-mt-24 mb-8 text-center sm:text-left sm:flex sm:items-end sm:space-x-8">
+                    <div class="profile-img-container z-10 flex-shrink-0">
+                        <img src="428687765_8532920083401514_7024635369783567657_n2.jpg" alt="นายเสฎฐวุฒิ วิชาพล" class="w-full h-full object-cover border-4 border-white rounded-full shadow-lg" onerror="this.src='https://placehold.co/200x200/1e3a8a/ffffff?text=SV'">
+                    </div>
+                    <div class="mt-6 sm:mt-0 pt-2 sm:pt-0 sm:flex-1">
+                        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">นายเสฎฐวุฒิ วิชาพล</h1>
+                        <p class="text-lg text-secondary font-medium mt-1">เทคโนโลยีคอมพิวเตอร์ | นักพัฒนาโปรแกรม</p>
+                    </div>
+                    <div class="mt-6 sm:mt-0 flex justify-center sm:justify-start space-x-3 pb-2">
+                        <a href="mailto:fonkla.ciw@gmail.com" class="p-2 bg-blue-50 text-secondary rounded-full hover:bg-secondary hover:text-white transition-colors duration-300 shadow-sm" title="อีเมล">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                        <a href="tel:0954527003" class="p-2 bg-green-50 text-green-600 rounded-full hover:bg-green-600 hover:text-white transition-colors duration-300 shadow-sm" title="โทรศัพท์">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="md:col-span-1 space-y-8">
+                        
+                        <!-- Personal Info -->
+                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <h2 class="text-xl font-bold text-primary border-b-2 border-blue-100 pb-2 mb-4 flex items-center">
+                                <i class="fa-solid fa-user mr-2 text-secondary"></i> ข้อมูลส่วนตัว
+                            </h2>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start">
+                                    <span class="w-24 text-gray-500 font-medium">วันเกิด:</span>
+                                    <span class="flex-1 text-gray-800">28 กรกฎาคม 2548</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <h2 class="text-xl font-bold text-primary border-b-2 border-blue-100 pb-2 mb-4 flex items-center">
+                                <i class="fa-solid fa-address-card mr-2 text-secondary"></i> ติดต่อ
+                            </h2>
+                            <ul class="space-y-4 text-sm">
+                                <li class="flex items-center group cursor-pointer" onclick="copyToClipboard('fonkla.ciw@gmail.com', 'คัดลอกอีเมลแล้ว')">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-secondary flex items-center justify-center mr-3 group-hover:bg-secondary group-hover:text-white transition-colors">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <span class="truncate">fonkla.ciw@gmail.com</span>
+                                </li>
+                                <li class="flex items-center group cursor-pointer" onclick="copyToClipboard('0954527003', 'คัดลอกเบอร์โทรแล้ว')">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <span>0954527003</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <h2 class="text-xl font-bold text-primary border-b-2 border-blue-100 pb-2 mb-4 flex items-center">
+                                <i class="fa-solid fa-star mr-2 text-accent"></i> ความสามารถ
+                            </h2>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 bg-blue-100 text-primary rounded-lg text-sm font-medium flex items-center shadow-sm">
+                                    <i class="fa-solid fa-code mr-1.5"></i> เขียนโปรแกรม
+                                </span>
+                                <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium flex items-center shadow-sm">
+                                    <i class="fa-solid fa-microphone-lines mr-1.5"></i> ร้องเพลง
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 space-y-8">
+                        
+                        <!-- Education -->
+                        <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10"></div>
+                            <h2 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                                <i class="fa-solid fa-graduation-cap mr-3 text-secondary text-2xl"></i> ประวัติการศึกษา
+                            </h2>
+                            
+                            <div class="relative border-l-2 border-blue-200 ml-3 md:ml-4 space-y-6">
+                                <!-- Current Education -->
+                                <div class="relative pl-6">
+                                    <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-secondary ring-4 ring-white"></span>
+                                    <h3 class="text-lg font-bold text-gray-800">มหาวิทยาลัยกาฬสินธุ์</h3>
+                                    <p class="text-sm text-secondary font-medium mt-1">สถานศึกษาปัจจุบัน</p>
+                                </div>
+
+                                <!-- Previous Education -->
+                                <div class="relative pl-6">
+                                    <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-300 ring-4 ring-white"></span>
+                                    <h3 class="text-lg font-bold text-gray-800">วิทยาลัยเทคนิคกาฬสินธุ์</h3>
+                                    <p class="text-sm text-gray-600 mt-1 font-medium">ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) ปีที่ 2/2568</p>
+                                    <p class="text-sm text-gray-500 mt-1">
+                                        <i class="fa-solid fa-book-open text-gray-400 mr-1"></i> สาขาวิชา: <span class="font-semibold text-gray-700">เทคโนโลยีคอมพิวเตอร์</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full -z-10"></div>
+                            <h2 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                                <i class="fa-solid fa-briefcase mr-3 text-accent text-2xl"></i> ประสบการณ์ทำงาน & ผลงาน
+                            </h2>
+                            
+                            <div class="space-y-6">
+                                <!-- Exp Item 1 -->
+                                <div class="group bg-gray-50 rounded-lg p-4 border-l-4 border-accent hover:bg-orange-50 transition-colors duration-300">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                        <h3 class="text-lg font-bold text-gray-800">ทีม KTC Dino Robot</h3>
+                                        <span class="inline-block px-3 py-1 bg-white text-accent text-xs font-bold rounded-full shadow-sm mt-2 sm:mt-0 border border-orange-100">ปี 2568</span>
+                                    </div>
+                                    <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                                        ประกอบหุ่นยนต์เข้าแข่งขันที่เซียร์รังสิต ในรอบชิงสิทธิ์ และเข้าร่วมการแข่งขันรอบชิงชนะเลิศระดับประเทศ
+                                    </p>
+                                    <div class="flex items-center text-xs text-gray-500 bg-white inline-block px-2 py-1 rounded shadow-sm">
+                                        <i class="fa-solid fa-trophy text-accent mr-1"></i> แข่งขันระดับประเทศ
+                                    </div>
+                                </div>
+
+                                <!-- Exp Item 2 -->
+                                <div class="group bg-gray-50 rounded-lg p-4 border-l-4 border-secondary hover:bg-blue-50 transition-colors duration-300">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                        <h3 class="text-lg font-bold text-gray-800">นักศึกษาฝึกงาน</h3>
+                                        <span class="inline-block px-3 py-1 bg-white text-secondary text-xs font-bold rounded-full shadow-sm mt-2 sm:mt-0 border border-blue-100">ปี 2568</span>
+                                    </div>
+                                    <p class="text-sm text-gray-700 leading-relaxed">
+                                        วิทยาลัยเทคนิคกาฬสินธุ์<br>
+                                        สายงานในแผนกวิชา
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 text-gray-400 py-4 text-center text-sm">
+                <p>&copy; 2026 นายเสฎฐวุฒิ วิชาพล. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"></div>
+
+    <script>
+        // Function to copy text and show toast
+        function copyToClipboard(text, successMessage) {
+            // Attempt to copy using modern clipboard API
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(successMessage);
+                }).catch(err => {
+                    fallbackCopyTextToClipboard(text, successMessage);
+                });
+            } else {
+                fallbackCopyTextToClipboard(text, successMessage);
+            }
+        }
+
+        // Fallback for copying text
+        function fallbackCopyTextToClipboard(text, successMessage) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            
+            // Avoid scrolling to bottom
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                var successful = document.execCommand('copy');
+                if(successful){
+                    showToast(successMessage);
+                } else {
+                    showToast('ไม่สามารถคัดลอกได้', 'error');
+                }
+            } catch (err) {
+                showToast('ไม่สามารถคัดลอกได้', 'error');
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        // Function to show toast notification
+        function showToast(message, type = 'success') {
+            const toastContainer = document.getElementById('toast-container');
+            
+            const toast = document.createElement('div');
+            
+            // Set styles based on type
+            let bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
+            let icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+
+            toast.className = `${bgColor} text-white px-4 py-3 rounded shadow-lg flex items-center transform transition-all duration-300 translate-y-full opacity-0`;
+            toast.innerHTML = `
+                <i class="fa-solid ${icon} mr-2"></i>
+                <span>${message}</span>
+            `;
+            
+            toastContainer.appendChild(toast);
+            
+            // Animate in
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-y-full', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+            });
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-full', 'opacity-0');
+                
+                // Remove element after animation finishes
+                setTimeout(() => {
+                    if (toastContainer.contains(toast)) {
+                        toastContainer.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
